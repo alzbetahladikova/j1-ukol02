@@ -29,7 +29,7 @@ public class HlavniProgram {
 
 
 
-        //sněhulák přidala jsem mu hrnec, oči, knoflíky a mrkev
+        //sněhulák - přidala jsem mu hrnec, oči, knoflíky a mrkev
         zofka.turnLeft(90);
         nakresliKruh(400,50,1.0,Color.CYAN);
         nakresliKruh(400,170,1.3,Color.CYAN);
@@ -52,7 +52,36 @@ public class HlavniProgram {
 
 
 
+        //mašinka + komínek a kouř
+        nakresliObdelnik(900,400,250,150,Color.DARK_GRAY);
+        zofka.turnRight(180);
+        nakresliKruh(900,400,1.34,Color.DARK_GRAY);
+        zofka.turnRight(90);
+        nakresliObdelnik(900,400,200,120,Color.BLUE);
+        nakresliKruh(850,400,0.6,Color.DARK_GRAY);
+        nakresliKruh(750,400,0.6, Color.DARK_GRAY);
+        zofka.turnRight(90);
+        nakresliRovnoramennyPravouhlyTrojuhelnik(700,420,100,Color.RED);
+        nakresliObdelnik(750,280,60,30,Color.DARK_GRAY);
+
+        nakresliKour(752,220,3,Color.BLACK);
+        nakresliKour(772,220,5,Color.BLACK);
+
+
     }
+
+    private void nakresliKour(double startX, double startY, int pocetOblacku,Color barva) {
+        zofka.setLocation(startX,startY);
+        zofka.setPenColor(barva);
+        for (int i=0; i<pocetOblacku;i++){
+            for (int a = 0; a < 90; a++) {
+                zofka.move(0.5);
+                zofka.turnRight(1);
+            }
+            zofka.turnLeft(90);
+        }
+    }
+
     private void nakresliRovnoramennyPravouhlyTrojuhelnik (double startX, double startY, double delkaStrany, Color barva)
     { zofka.setPenColor(barva);
         zofka.setLocation(startX,startY);
