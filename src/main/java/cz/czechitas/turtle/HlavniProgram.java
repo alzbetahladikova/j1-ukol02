@@ -10,7 +10,6 @@ public class HlavniProgram {
     public void start() {
         zofka = new Turtle();
 
-
        /* cvicne nakreslene obrazce
         nakresliRovnoramennyPravouhlyTrojuhelnik(800,100,100,Color.ORANGE);
         nakresliRovnostrannyTrojuhelnik(150,150,100, Color.cyan);
@@ -18,6 +17,7 @@ public class HlavniProgram {
         nakresliObdelnik(500, 500, 100, 200, Color.green);
         nakresliKruh(500,100,1,Color.BLUE);
         */
+
 
         //zmrzlina
         nakresliKruh(200, 200, 1.5, Color.MAGENTA);
@@ -63,8 +63,6 @@ public class HlavniProgram {
         nakresliObdelnik(750, 280, 60, 30, Color.DARK_GRAY);
         nakresliKour(752, 220, 3, Color.BLACK);
         nakresliKour(772, 220, 5, Color.BLACK);
-
-
     }
 
     private void nakresliKour(double startX, double startY, int pocetOblacku, Color barva) {
