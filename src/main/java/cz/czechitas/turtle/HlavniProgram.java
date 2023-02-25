@@ -21,6 +21,36 @@ public class HlavniProgram {
 
         */
 
+        //zmrzlina
+      nakresliKruh(200,200,1.5,Color.MAGENTA);
+      zofka.turnLeft(90);
+             nakresliRovnostrannyTrojuhelnik(220,200,210,Color.orange);
+        zofka.turnRight(90);
+
+
+
+        //sněhulák přidala jsem mu hrnec, oči, knoflíky a mrkev
+        zofka.turnLeft(90);
+        nakresliKruh(400,50,1.0,Color.CYAN);
+        nakresliKruh(400,170,1.3,Color.CYAN);
+        nakresliKruh(400,320,1.5,Color.CYAN);
+        nakresliKruh(280,200,0.7,Color.CYAN);
+        nakresliKruh(520,200,0.7,Color.CYAN);
+        zofka.setPenColor(Color.orange);
+        zofka.setLocation(400,100);
+        zofka.move(10);
+        nakresliCtvrec(425,50,50,Color.DARK_GRAY);
+        zofka.turnRight(90);
+        zofka.setLocation(380,85);
+        zofka.move(1);
+        zofka.setLocation(420,85 );
+        zofka.move(1);
+        zofka.setLocation(400,200);
+        for (int i =0; i<7; i++){zofka.move(1);
+        double a = zofka.getY();
+        zofka.setY(a*1.15);}
+
+
 
     }
     private void nakresliRovnoramennyPravouhlyTrojuhelnik (double startX, double startY, double delkaStrany, Color barva)
